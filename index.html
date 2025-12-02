@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swipe Your Life</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="logo">Swipe Your <span>Life</span></div>
+      <p class="subtitle">Every decision changes your story.</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-label">
+          <span>📚 Career</span>
+          <span id="career-value">50</span>
+        </div>
+        <div class="stat-bar">
+          <div id="career-bar" class="stat-fill"></div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-label">
+          <span>❤️ Relationships</span>
+          <span id="relationships-value">50</span>
+        </div>
+        <div class="stat-bar">
+          <div id="relationships-bar" class="stat-fill"></div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-label">
+          <span>🧠 Mental Health</span>
+          <span id="mental-value">50</span>
+        </div>
+        <div class="stat-bar">
+          <div id="mental-bar" class="stat-fill"></div>
+        </div>
+      </div>
+    </section>
+
+    <main class="game">
+      <div class="card-container">
+        <div id="card" class="card">
+          <div class="card-meta">
+            <span id="card-count">1 / 1</span>
+            <span id="card-tag" class="pill">Life Choice</span>
+          </div>
+          <h2 id="card-title">Loading...</h2>
+          <p id="card-text">Please wait.</p>
+          <div class="choices">
+            <button id="left-btn" class="choice choice-left">
+              <span class="choice-label" id="left-label">Left choice</span>
+              <span class="choice-hint">←</span>
+            </button>
+            <button id="right-btn" class="choice choice-right">
+              <span class="choice-label" id="right-label">Right choice</span>
+              <span class="choice-hint">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="end-screen" class="end-screen hidden">
+        <h2 id="end-title">Game Over</h2>
+        <p id="end-reason">One of your stats dropped to zero.</p>
+
+        <div class="end-stats">
+          <div class="end-stat">
+            <span>📚 Career</span>
+            <span id="end-career">0</span>
+          </div>
+          <div class="end-stat">
+            <span>❤️ Relationships</span>
+            <span id="end-relationships">0</span>
+          </div>
+          <div class="end-stat">
+            <span>🧠 Mental Health</span>
+            <span id="end-mental">0</span>
+          </div>
+        </div>
+
+        <p id="end-summary" class="end-summary">
+          Your choices shaped a unique version of you.
+        </p>
+
+        <button id="restart-btn" class="restart-btn">Play Again</button>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <span>Made with 💻 & ☕</span>
+      <span class="dot">•</span>
+      <span>Gen Z Life Simulator</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
